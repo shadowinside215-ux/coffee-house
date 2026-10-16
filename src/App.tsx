@@ -68,11 +68,11 @@ export default function App() {
           getWebsiteSettings(),
         ]);
 
-        const unifiedLogo = fetchedSettings?.logoUrl || fetchedBusiness?.logoUrl || '';
+        const unifiedLogo = fetchedSettings?.logoUrl || fetchedBusiness?.logoUrl || '/logo.svg';
         if (fetchedBusiness) {
           setBusiness({
             ...fetchedBusiness,
-            logoUrl: unifiedLogo || fetchedBusiness.logoUrl || '',
+            logoUrl: unifiedLogo,
           });
         }
         if (fetchedCategories && fetchedCategories.length > 0) setCategories(fetchedCategories);
@@ -117,7 +117,7 @@ export default function App() {
     scrollToTarget('#contact');
   };
 
-  const activeLogoUrl = settings.logoUrl || business.logoUrl || '';
+  const activeLogoUrl = settings.logoUrl || business.logoUrl || '/logo.svg';
 
   return (
     <div className="min-h-screen flex flex-col bg-[#090604] text-[#F4EFEB] relative overflow-x-hidden selection:bg-[#C5A059]/30 selection:text-white">

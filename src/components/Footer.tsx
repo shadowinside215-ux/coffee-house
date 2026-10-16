@@ -10,7 +10,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }) => {
   const currentYear = new Date().getFullYear();
-  const displayLogo = logoUrl || business.logoUrl;
+  const displayLogo = logoUrl || business.logoUrl || '/logo.svg';
 
   const handleScroll = (href: string) => {
     const el = document.querySelector(href);
@@ -29,22 +29,19 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
           {/* Column 1: Brand & Glowing Neon Identity */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              {displayLogo ? (
-                <div className="w-12 h-12 rounded-xl bg-[#140E0A] overflow-hidden border border-[#C5A059]/40 shadow-sm shrink-0 flex items-center justify-center p-1">
-                  <img
-                    src={displayLogo}
-                    alt="Logo the coffee house دار القهوة"
-                    className="w-full h-full object-contain"
-                    onError={(e) => {
-                      (e.currentTarget.parentElement as HTMLElement).style.display = 'none';
-                    }}
-                  />
-                </div>
-              ) : (
-                <div className="w-10 h-10 rounded-xl bg-[#140E0A] flex items-center justify-center text-white border border-[#2C1B12] shadow-sm shrink-0 neon-cup-glow">
-                  <Coffee className="w-5 h-5 text-white" />
-                </div>
-              )}
+              <div className="w-12 h-12 rounded-xl bg-[#140E0A] overflow-hidden border border-[#C5A059]/40 shadow-sm shrink-0 flex items-center justify-center p-1">
+                <img
+                  src={displayLogo}
+                  alt="Logo the coffee house دار القهوة"
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    if (!img.src.endsWith('/logo.svg')) {
+                      img.src = '/logo.svg';
+                    }
+                  }}
+                />
+              </div>
               <div>
                 <span className="font-serif text-lg font-extrabold tracking-[0.14em] text-white block leading-tight uppercase neon-sign-text">
                   THE COFFEE HOUSE

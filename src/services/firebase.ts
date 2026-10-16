@@ -89,7 +89,11 @@ export async function getBusinessInfo(): Promise<BusinessInfo> {
       const docRef = doc(db, 'settings', 'business');
       const snap = await getDoc(docRef);
       if (snap.exists()) {
-        return snap.data() as BusinessInfo;
+        const data = snap.data() as BusinessInfo;
+        return {
+          ...data,
+          logoUrl: data.logoUrl || '/logo.svg',
+        };
       }
     } catch (err) {
       console.warn('Firestore fetch business error, falling back to cache:', err);
@@ -99,7 +103,11 @@ export async function getBusinessInfo(): Promise<BusinessInfo> {
   const cached = localStorage.getItem(CACHE_KEYS.BUSINESS);
   if (cached) {
     try {
-      return JSON.parse(cached);
+      const parsed = JSON.parse(cached) as BusinessInfo;
+      return {
+        ...parsed,
+        logoUrl: parsed.logoUrl || '/logo.svg',
+      };
     } catch {
       // fallback
     }
@@ -298,7 +306,11 @@ export async function getWebsiteSettings(): Promise<WebsiteSettings> {
       const docRef = doc(db, 'settings', 'website');
       const snap = await getDoc(docRef);
       if (snap.exists()) {
-        return snap.data() as WebsiteSettings;
+        const data = snap.data() as WebsiteSettings;
+        return {
+          ...data,
+          logoUrl: data.logoUrl || '/logo.svg',
+        };
       }
     } catch (err) {
       console.warn('Firestore fetch settings error, falling back to cache:', err);
@@ -308,7 +320,11 @@ export async function getWebsiteSettings(): Promise<WebsiteSettings> {
   const cached = localStorage.getItem(CACHE_KEYS.SETTINGS);
   if (cached) {
     try {
-      return JSON.parse(cached);
+      const parsed = JSON.parse(cached) as WebsiteSettings;
+      return {
+        ...parsed,
+        logoUrl: parsed.logoUrl || '/logo.svg',
+      };
     } catch {
       // fallback
     }

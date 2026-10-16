@@ -82,18 +82,19 @@ export const Hero: React.FC<HeroProps> = ({
               className="p-6 sm:p-8 rounded-3xl bg-[#0F0A07]/90 border border-white/10 shadow-2xl backdrop-blur-md storefront-slats relative overflow-hidden transition-shadow hover:shadow-[0_0_35px_rgba(224,192,122,0.15)]"
             >
               <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-6">
-                {(settings.logoUrl || business.logoUrl) && (
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#140E0A] border-2 border-[#C5A059]/50 shadow-xl overflow-hidden p-2 flex items-center justify-center shrink-0 neon-cup-glow">
-                    <img
-                      src={settings.logoUrl || business.logoUrl}
-                      alt="Logo the coffee house دار القهوة"
-                      className="w-full h-full object-contain"
-                      onError={(e) => {
-                        (e.currentTarget.parentElement as HTMLElement).style.display = 'none';
-                      }}
-                    />
-                  </div>
-                )}
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#140E0A] border-2 border-[#C5A059]/50 shadow-xl overflow-hidden p-2 flex items-center justify-center shrink-0 neon-cup-glow">
+                  <img
+                    src={settings.logoUrl || business.logoUrl || '/logo.svg'}
+                    alt="Logo the coffee house دار القهوة"
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      const img = e.currentTarget;
+                      if (!img.src.endsWith('/logo.svg')) {
+                        img.src = '/logo.svg';
+                      }
+                    }}
+                  />
+                </div>
                 <div className="flex flex-col items-start gap-1">
                   <span className="text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase text-[#C5A059] block mb-1">
                     Enseigne Lumineuse Officielle

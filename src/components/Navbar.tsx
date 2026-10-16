@@ -109,7 +109,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       <div
-        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6 transition-all duration-300 ${
+        className={`max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4 md:gap-6 transition-all duration-300 ${
           isScrolled ? 'h-16' : 'h-20'
         }`}
       >
@@ -118,36 +118,27 @@ export const Navbar: React.FC<NavbarProps> = ({
           href="#home"
           onClick={handleLogoClick}
           title="the coffee house دار القهوة"
-          className="flex items-center gap-3.5 whitespace-nowrap shrink-0 group py-1 select-none"
+          className="flex items-center gap-2 sm:gap-3.5 whitespace-nowrap min-w-0 group py-1 select-none"
         >
-          {logoUrl ? (
-            <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#140D09] border border-[#C5A059]/40 shadow-md shrink-0 flex items-center justify-center p-1 group-hover:border-[#E0C07A] transition-all relative">
-              <img
-                src={logoUrl}
-                alt="Logo دار القهوة the coffee house"
-                className="w-full h-full object-contain"
-                onError={(e) => {
-                  const img = e.currentTarget;
-                  img.style.display = 'none';
-                  const fallback = img.parentElement?.querySelector('.logo-fallback') as HTMLElement | null;
-                  if (fallback) fallback.style.display = 'flex';
-                }}
-              />
-              <div className="logo-fallback hidden w-full h-full items-center justify-center text-[#E0C07A]">
-                <Coffee className="w-6 h-6 text-[#E0C07A]" />
-              </div>
-            </div>
-          ) : (
-            <div className="w-11 h-11 rounded-xl bg-[#140E0A] flex items-center justify-center text-white border border-[#3D2619] shadow-inner transition-transform group-hover:scale-105 shrink-0 neon-cup-glow">
-              <Coffee className="w-5 h-5 text-white" />
-            </div>
-          )}
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden bg-[#140D09] border border-[#C5A059]/40 shadow-md shrink-0 flex items-center justify-center p-1 group-hover:border-[#E0C07A] transition-all relative">
+            <img
+              src={logoUrl || '/logo.svg'}
+              alt="Logo دار القهوة the coffee house"
+              className="w-full h-full object-contain"
+              onError={(e) => {
+                const img = e.currentTarget;
+                if (!img.src.endsWith('/logo.svg')) {
+                  img.src = '/logo.svg';
+                }
+              }}
+            />
+          </div>
 
-          <div className="flex flex-col">
-            <span className="font-serif text-lg sm:text-xl font-extrabold uppercase tracking-[0.14em] text-white leading-tight neon-sign-text">
+          <div className="flex flex-col min-w-0">
+            <span className="font-serif text-[13px] xs:text-sm sm:text-lg lg:text-xl font-extrabold uppercase tracking-[0.06em] sm:tracking-[0.14em] text-white leading-tight neon-sign-text truncate">
               THE COFFEE HOUSE
             </span>
-            <span className="font-arabic text-sm text-[#E0C07A] font-bold leading-none mt-0.5 tracking-wider neon-arabic-glow">
+            <span className="font-arabic text-[11px] sm:text-sm text-[#E0C07A] font-bold leading-none mt-0.5 tracking-wide neon-arabic-glow">
               دار القهوة
             </span>
           </div>
@@ -184,34 +175,45 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
         </nav>
 
-        {/* Zone 3: Social & Action Controls (Admin button hidden as requested) */}
-        <div className="flex items-center gap-3 shrink-0">
-          {/* Instagram Button */}
+        {/* Zone 3: Social & Action Controls */}
+        <div className="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 shrink-0">
+          {/* Instagram Button (visible on sm+) */}
           <a
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
             title="Suivez-nous sur Instagram"
-            className="p-2 rounded-xl bg-[#140E0A] hover:bg-[#22160F] text-[#E0C07A] hover:text-white border border-[#2C1B12] transition-colors"
+            className="hidden sm:flex p-2 rounded-xl bg-[#140E0A] hover:bg-[#22160F] text-[#E0C07A] hover:text-white border border-[#2C1B12] transition-colors"
           >
             <Instagram className="w-4 h-4" />
           </a>
 
-          {/* Primary View Menu CTA */}
+          {/* Primary View Menu CTA - ALWAYS visible on all screen sizes */}
           <button
             onClick={() => handleScroll('#menu')}
-            className="px-5 py-2.5 text-xs font-semibold tracking-wider uppercase text-white bg-gradient-to-r from-[#2C1910] to-[#180E09] hover:from-[#3D2317] hover:to-[#22140D] rounded-xl transition-all whitespace-nowrap shrink-0 border border-white/20 shadow-md cursor-pointer hover:border-white/40"
+            className="px-2.5 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 text-[10px] sm:text-xs font-semibold tracking-wider uppercase text-white bg-gradient-to-r from-[#2C1910] to-[#180E09] hover:from-[#3D2317] hover:to-[#22140D] rounded-xl transition-all whitespace-nowrap shrink-0 border border-white/20 shadow-md cursor-pointer hover:border-white/40 flex items-center gap-1 sm:gap-1.5"
           >
-            Voir la Carte
+            <Coffee className="w-3.5 h-3.5 text-[#E0C07A] shrink-0" />
+            <span className="hidden xs:inline">Voir la Carte</span>
+            <span className="xs:hidden">Carte</span>
           </button>
 
-          {/* Mobile Menu Toggle */}
+          {/* 3-Dots Menu Toggle - ALWAYS visible on mobile & tablet (< lg) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white bg-[#140E0A] hover:bg-[#22160F] rounded-xl border border-[#2C1B12] cursor-pointer"
-            aria-label="Menu Mobile"
+            className="lg:hidden p-2 text-white bg-[#140E0A] hover:bg-[#22160F] rounded-xl border border-[#C5A059]/40 shadow-sm shrink-0 flex items-center justify-center transition-all cursor-pointer hover:border-[#E0C07A]"
+            aria-label="Menu navigation et 3 points"
+            title="Menu et navigation"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <MenuIcon className="w-5 h-5" />}
+            {mobileMenuOpen ? (
+              <X className="w-5 h-5 text-[#E0C07A]" />
+            ) : (
+              <div className="flex items-center justify-center gap-1 w-5 h-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#E0C07A] shadow-[0_0_6px_#E0C07A]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_6px_white]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#E0C07A] shadow-[0_0_6px_#E0C07A]" />
+              </div>
+            )}
           </button>
         </div>
       </div>

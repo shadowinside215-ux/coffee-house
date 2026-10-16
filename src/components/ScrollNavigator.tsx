@@ -50,7 +50,7 @@ export const ScrollNavigator: React.FC = () => {
           exit={{ opacity: 0, x: 20 }}
           transition={{ duration: 0.4 }}
           aria-label="Navigation rapide"
-          className="hidden xl:flex fixed right-6 top-1/2 -translate-y-1/2 z-40 flex-col items-end gap-3.5 select-none"
+          className="fixed right-2 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex flex-col items-end gap-2 sm:gap-3.5 select-none p-1 sm:p-0 rounded-full bg-[#120C08]/70 sm:bg-transparent border border-[#2C1B12]/60 sm:border-transparent backdrop-blur-sm sm:backdrop-blur-none"
         >
           {SECTIONS.map((section) => {
             const isActive = activeId === section.id;
@@ -59,12 +59,12 @@ export const ScrollNavigator: React.FC = () => {
             return (
               <div
                 key={section.id}
-                className="relative flex items-center group cursor-pointer"
+                className="relative flex items-center group cursor-pointer p-1"
                 onMouseEnter={() => setHoveredId(section.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 onClick={() => scrollToTarget(`#${section.id}`)}
               >
-                {/* Tooltip on hover */}
+                {/* Tooltip on hover (desktop only) */}
                 <AnimatePresence>
                   {isHovered && (
                     <motion.div
@@ -72,7 +72,7 @@ export const ScrollNavigator: React.FC = () => {
                       animate={{ opacity: 1, x: 0, scale: 1 }}
                       exit={{ opacity: 0, x: 8, scale: 0.92 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute right-7 px-3 py-1.5 rounded-xl bg-[#120C08]/95 backdrop-blur-md border border-[#C5A059]/40 shadow-xl text-right whitespace-nowrap pointer-events-none"
+                      className="hidden sm:block absolute right-7 px-3 py-1.5 rounded-xl bg-[#120C08]/95 backdrop-blur-md border border-[#C5A059]/40 shadow-xl text-right whitespace-nowrap pointer-events-none"
                     >
                       <span className="block text-[11px] font-semibold text-white tracking-wide">
                         {section.label}

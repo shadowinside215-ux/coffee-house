@@ -23,7 +23,7 @@ export const INITIAL_BUSINESS_INFO: BusinessInfo = {
     'https://glovoapp.com/fr/ma/technopolis/stores/the-coffee-house-tec?utm_medium=organic&utm_campaign=google_reserve_place_order_action&utm_source=google',
   instagramUrl: 'https://www.instagram.com/thecoffeehouse.slj/',
   taplinkUrl: 'https://taplink.cc',
-  logoUrl: '', // Uploadable via Admin
+  logoUrl: '/logo.svg', // Official brand logo asset in /public/logo.svg
   description:
     'More than a coffee stop, the coffee house دار القهوة is a place to slow down, enjoy exceptional coffee, share delicious Moroccan breakfast formulas (L’express, Frenchy, Beldi), and spend time in a comfortable atmosphere with outdoor terrace seating in Sala Al Jadida.',
   descriptionAr:
@@ -135,5 +135,5 @@ export const INITIAL_SETTINGS: WebsiteSettings = {
   heroSubtextAr:
     'اكتشفوا وجبات الفطور المتكاملة (إكسبريس، فرينشي، بلدي)، وأجود أنواع القهوة في أجواء هادئة مع جلسات مريحة وتراس خارجي بسلا الجديدة.',
   heroImageUrl: DEFAULT_CAFE_IMAGES.hero,
-  logoUrl: '',
+  logoUrl: '/logo.svg',
 };
