@@ -1,0 +1,8 @@
+{
+  "name": "دار القهوة – The Coffee House",
+  "description": "Premium café and breakfast experience in Sala Al Jadida, Morocco. Artisanal espresso, traditional Moroccan breakfast, crêpes, and a calm, welcoming atmosphere.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
