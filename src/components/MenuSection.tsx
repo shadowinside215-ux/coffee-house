@@ -107,7 +107,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 text-xs font-medium rounded-xl transition-all whitespace-nowrap shrink-0 cursor-pointer ${
                 selectedCategory === 'all'
-                  ? 'bg-white text-[#090604] font-bold shadow-md'
+                  ? 'bg-gradient-to-r from-[#174332] to-[#0E2E21] text-[#34D399] border border-[#10B981]/50 font-bold shadow-[0_0_15px_rgba(16,185,129,0.25)]'
                   : 'bg-[#140E0A] text-[#B8A79B] hover:text-white hover:bg-[#20150F] border border-[#261810]'
               }`}
             >
@@ -121,7 +121,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 text-xs font-medium rounded-xl transition-all whitespace-nowrap shrink-0 cursor-pointer ${
                     selectedCategory === category.id
-                      ? 'bg-white text-[#090604] font-bold shadow-md'
+                      ? 'bg-gradient-to-r from-[#174332] to-[#0E2E21] text-[#34D399] border border-[#10B981]/50 font-bold shadow-[0_0_15px_rgba(16,185,129,0.25)]'
                       : 'bg-[#140E0A] text-[#B8A79B] hover:text-white hover:bg-[#20150F] border border-[#261810]'
                   }`}
                 >
@@ -197,11 +197,11 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                     />
 
                     {/* Price Badge in Image Corner */}
-                    <div className="absolute top-3 right-3 bg-[#090604]/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 shadow-lg">
+                    <div className="absolute top-3 right-3 bg-[#090604]/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-[#10B981]/40 shadow-lg">
                       <span className="font-serif text-lg font-bold text-white tabular-nums">
                         {item.price}
                       </span>
-                      <span className="text-xs font-semibold text-[#E0C07A] ml-1">
+                      <span className="text-xs font-semibold text-[#34D399] ml-1">
                         Dh
                       </span>
                     </div>

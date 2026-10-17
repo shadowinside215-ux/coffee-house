@@ -69,6 +69,12 @@ export const AmbientBackground: React.FC = () => {
         className="absolute bottom-10 right-1/4 w-[550px] h-[550px] rounded-full blur-[115px] bg-[#E0C07A]/10 will-change-transform opacity-60"
       />
 
+      {/* Floating Ambient Orb 4 - Moroccan Emerald Botanical Glow (Center-Left / Mid-Page) */}
+      <motion.div
+        style={{ y: orb2Y }}
+        className="absolute top-[45%] -left-32 w-[600px] h-[600px] rounded-full blur-[140px] bg-gradient-to-tr from-[#0E4833]/25 via-[#10B981]/12 to-transparent will-change-transform opacity-70"
+      />
+
       {/* Parallax Floating Accent 1: Stylized Coffee Bean (Top Left) */}
       <motion.div
         style={{ y: particle1Y, rotate: particleRotate1 }}

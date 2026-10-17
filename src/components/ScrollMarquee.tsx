@@ -63,14 +63,14 @@ export const ScrollMarquee: React.FC<ScrollMarqueeProps> = ({ className = '' }) 
                   <span
                     className={
                       item.isArabic
-                        ? 'font-arabic text-base text-[#E0C07A] font-bold tracking-normal'
+                        ? 'font-arabic text-base text-[#34D399] font-bold tracking-normal'
                         : 'font-serif text-white tracking-widest'
                     }
                   >
                     {item.text}
                   </span>
-                  {Icon && <Icon className="w-3.5 h-3.5 text-[#C5A059] shrink-0" />}
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#3D2518]" />
+                  {Icon && <Icon className="w-3.5 h-3.5 text-[#10B981] shrink-0" />}
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]/70 shadow-[0_0_4px_#10B981]" />
                 </div>
               );
             })}

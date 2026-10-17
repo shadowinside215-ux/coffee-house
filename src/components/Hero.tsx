@@ -60,17 +60,17 @@ export const Hero: React.FC<HeroProps> = ({
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-8 space-y-7"
           >
-            {/* Real Storefront Illuminated Header Box */}
+            {/* Real Storefront Illuminated Header Box with Emerald & Gold theme */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-[#120C08] border border-[#2C1B12] shadow-sm text-xs font-semibold uppercase tracking-widest text-[#E0C07A]"
+              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-[#091F16]/90 border border-[#166549]/60 shadow-[0_0_15px_rgba(16,185,129,0.15)] text-xs font-semibold uppercase tracking-widest text-[#E0C07A]"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#E0C07A]" />
+              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse shadow-[0_0_8px_#34D399]" />
               <span>Café & Petit-Déjeuner · Sala Al Jadida</span>
               <span aria-hidden="true" className="opacity-40">·</span>
-              <span className="text-emerald-400">Ouvert · Ferme à 00:00</span>
+              <span className="text-[#34D399] font-medium">Ouvert · Ferme à 00:00</span>
             </motion.div>
 
             {/* Glowing Brand Signboard (Replicating user's photo 2) */}
@@ -131,9 +131,9 @@ export const Hero: React.FC<HeroProps> = ({
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={onExploreMenu}
-                className="px-7 py-3.5 text-xs font-semibold tracking-wider uppercase text-white bg-gradient-to-r from-[#2A180F] to-[#160D08] hover:from-[#3B2216] hover:to-[#22140D] rounded-xl transition-all shadow-lg border border-white/30 flex items-center gap-2.5 whitespace-nowrap cursor-pointer hover:border-white/60"
+                className="px-7 py-3.5 text-xs font-semibold tracking-wider uppercase text-white bg-gradient-to-r from-[#173D2C] via-[#2A180F] to-[#120C08] hover:from-[#1E543D] hover:to-[#22140D] rounded-xl transition-all shadow-lg border border-[#10B981]/50 flex items-center gap-2.5 whitespace-nowrap cursor-pointer hover:border-[#34D399] hover:shadow-[0_0_20px_rgba(16,185,129,0.25)]"
               >
-                <BookOpen className="w-4 h-4 text-[#E0C07A]" />
+                <BookOpen className="w-4 h-4 text-[#34D399]" />
                 <span>Consulter la Carte (Formules)</span>
               </motion.button>
 
@@ -163,8 +163,9 @@ export const Hero: React.FC<HeroProps> = ({
             >
               <div className="border-b border-[#2C1B12] pb-5">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs uppercase tracking-wider text-[#E0C07A] font-semibold">
-                    Google Maps Vérifié
+                  <span className="text-xs uppercase tracking-wider text-[#34D399] font-semibold flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] shadow-[0_0_6px_#10B981]" />
+                    <span>Google Maps Vérifié</span>
                   </span>
                   <div className="flex items-center gap-1 text-[#E0C07A]">
                     <Star className="w-4 h-4 fill-[#E0C07A]" />
@@ -181,14 +182,14 @@ export const Hero: React.FC<HeroProps> = ({
 
               <div className="space-y-4 text-xs text-[#D4C3B7]">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-xl bg-[#1C130D] border border-[#2C1B12] flex items-center justify-center shrink-0 text-[#E0C07A]">
+                  <div className="w-8 h-8 rounded-xl bg-[#0A261C] border border-[#166549]/60 flex items-center justify-center shrink-0 text-[#34D399]">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
                     <strong className="block text-white font-medium text-sm">
                       Horaires d'Ouverture
                     </strong>
-                    <span className="text-emerald-400 font-medium">
+                    <span className="text-[#34D399] font-medium">
                       {business.openingHours || 'Ouvert · Ferme à 00:00 (Closes 12 AM)'}
                     </span>
                   </div>
@@ -238,11 +239,11 @@ export const Hero: React.FC<HeroProps> = ({
             className="flex flex-col items-center gap-2 text-xs uppercase tracking-widest text-[#B8A79B] hover:text-[#E0C07A] transition-colors cursor-pointer group select-none"
           >
             <span className="text-[10px] font-semibold tracking-[0.25em]">Découvrir Nos Formules</span>
-            <div className="w-5 h-9 rounded-full border border-[#C5A059]/40 flex items-start justify-center p-1.5 group-hover:border-[#E0C07A] transition-colors">
+            <div className="w-5 h-9 rounded-full border border-[#C5A059]/40 flex items-start justify-center p-1.5 group-hover:border-[#10B981] transition-colors">
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-                className="w-1 h-1.5 rounded-full bg-[#E0C07A]"
+                className="w-1 h-1.5 rounded-full bg-[#10B981] shadow-[0_0_6px_#34D399]"
               />
             </div>
           </button>

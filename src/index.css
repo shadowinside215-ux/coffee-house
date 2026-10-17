@@ -15,6 +15,14 @@
     --color-caramel-light: #E0C07A;
     --color-text-main: #F4EFEB;
     --color-text-muted: #A38F82;
+
+    /* Secondary Moroccan Emerald & Mint Botanical Theme */
+    --color-secondary-green-dark: #08241A;
+    --color-secondary-green: #0E4833;
+    --color-secondary-green-mid: #166549;
+    --color-secondary-green-emerald: #059669;
+    --color-secondary-green-light: #10B981;
+    --color-secondary-green-mint: #34D399;
   }
 
   html {
@@ -46,6 +54,14 @@
 
 .ambient-espresso-glow {
   background: radial-gradient(circle at 50% 50%, rgba(70, 39, 23, 0.15) 0%, transparent 70%);
+}
+
+.ambient-emerald-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+}
+
+.emerald-border-glow {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
 }
 
 /* Authentic Neon Storefront Sign Glow (matching user storefront photo) */
