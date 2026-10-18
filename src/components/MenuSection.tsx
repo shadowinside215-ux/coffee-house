@@ -54,7 +54,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
   };
 
   return (
-    <section id="menu" className="py-24 bg-[#06120C] border-t border-[#153826]">
+    <section id="menu" className="py-24 bg-[#090604] border-t border-[#1C120C]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -70,11 +70,11 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="origin-right h-[1px] w-10 sm:w-16 bg-gradient-to-r from-transparent to-[#2E8B62]"
+              className="origin-right h-[1px] w-10 sm:w-16 bg-gradient-to-r from-transparent to-[#C5A059]"
             />
             <div className="flex items-center gap-2 text-xs font-semibold tracking-widest text-[#E0C07A] uppercase">
               <span>Formules & Carte Officielle</span>
-              <span aria-hidden="true" className="text-[#34D399]">·</span>
+              <span aria-hidden="true">·</span>
               <span>Commandes WhatsApp</span>
             </div>
             <motion.div
@@ -82,13 +82,13 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="origin-left h-[1px] w-10 sm:w-16 bg-gradient-to-l from-transparent to-[#2E8B62]"
+              className="origin-left h-[1px] w-10 sm:w-16 bg-gradient-to-l from-transparent to-[#C5A059]"
             />
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
             Nos Formules Petit-Déjeuner
           </h2>
-          <p className="text-sm sm:text-base text-[#A8C2B5] font-light leading-relaxed">
+          <p className="text-sm sm:text-base text-[#B8A79B] font-light leading-relaxed">
             Compositions fraîches et généreuses servies sur place et en terrasse. Commandez en direct via WhatsApp pour une préparation immédiate.
           </p>
         </motion.div>
@@ -99,16 +99,16 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 mb-10 pb-6 border-b border-[#163827]"
+          className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 mb-10 pb-6 border-b border-[#22160F]"
         >
-          {/* Segmented Category Buttons - Primary Cafe Dark Green */}
+          {/* Segmented Category Buttons */}
           <div className="flex items-center gap-1.5 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
             <button
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 text-xs font-medium rounded-xl transition-all whitespace-nowrap shrink-0 cursor-pointer ${
                 selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-[#174831] via-[#1E5C3F] to-[#143D2B] text-white border-2 border-[#2E8B62] font-bold shadow-[0_0_20px_rgba(46,139,98,0.35)]'
-                  : 'bg-[#091710] text-[#A6BFB2] hover:text-white hover:bg-[#0E241A] border border-[#163827]'
+                  ? 'bg-gradient-to-r from-[#174332] to-[#0E2E21] text-[#34D399] border border-[#10B981]/50 font-bold shadow-[0_0_15px_rgba(16,185,129,0.25)]'
+                  : 'bg-[#140E0A] text-[#B8A79B] hover:text-white hover:bg-[#20150F] border border-[#261810]'
               }`}
             >
               Toutes les Formules ({cleanItems.length})
@@ -121,8 +121,8 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 text-xs font-medium rounded-xl transition-all whitespace-nowrap shrink-0 cursor-pointer ${
                     selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-[#174831] via-[#1E5C3F] to-[#143D2B] text-white border-2 border-[#2E8B62] font-bold shadow-[0_0_20px_rgba(46,139,98,0.35)]'
-                      : 'bg-[#091710] text-[#A6BFB2] hover:text-white hover:bg-[#0E241A] border border-[#163827]'
+                      ? 'bg-gradient-to-r from-[#174332] to-[#0E2E21] text-[#34D399] border border-[#10B981]/50 font-bold shadow-[0_0_15px_rgba(16,185,129,0.25)]'
+                      : 'bg-[#140E0A] text-[#B8A79B] hover:text-white hover:bg-[#20150F] border border-[#261810]'
                   }`}
                 >
                   <span>{category.name}</span>
@@ -137,25 +137,25 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
 
           {/* Search Input */}
           <div className="relative min-w-[240px]">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#789689]" />
+            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#7D6B5F]" />
             <input
               type="text"
               placeholder="Rechercher une formule..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 text-xs bg-[#091710] border border-[#183E2C] rounded-xl text-white placeholder-[#789689] focus:outline-none focus:border-[#2E8B62]"
+              className="w-full pl-9 pr-4 py-2 text-xs bg-[#140E0A] border border-[#261810] rounded-xl text-white placeholder-[#7D6B5F] focus:outline-none focus:border-white/40"
             />
           </div>
         </motion.div>
 
         {/* Menu Items Grid */}
         {filteredItems.length === 0 ? (
-          <div className="text-center py-16 bg-[#091710] rounded-3xl border border-[#163827] p-8 max-w-lg mx-auto">
+          <div className="text-center py-16 bg-[#120C08] rounded-3xl border border-[#22160F] p-8 max-w-lg mx-auto">
             <AlertCircle className="w-8 h-8 text-[#E0C07A] mx-auto mb-3" />
             <h3 className="text-lg font-serif font-bold text-white mb-1">
               Aucun résultat
             </h3>
-            <p className="text-xs text-[#9BB3A7] mb-4">
+            <p className="text-xs text-[#A38F82] mb-4">
               Aucune formule ne correspond à votre recherche.
             </p>
             <button
@@ -163,7 +163,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                 setSelectedCategory('all');
                 setSearchQuery('');
               }}
-              className="px-4 py-2 text-xs font-semibold text-white bg-[#143D2B] hover:bg-[#1E5C3F] border border-[#2E8B62] rounded-xl cursor-pointer"
+              className="px-4 py-2 text-xs font-semibold text-white bg-[#22160F] hover:bg-[#2F1F15] rounded-xl cursor-pointer"
             >
               Réinitialiser
             </button>
@@ -182,11 +182,11 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                   ease: [0.16, 1, 0.3, 1],
                 }}
                 whileHover={{ y: -8, scale: 1.018 }}
-                className="group bg-[#081710] rounded-3xl overflow-hidden border border-[#173D2A] hover:border-[#2E8B62] shadow-xl hover:shadow-[0_16px_40px_rgba(4,16,10,0.85)] transition-all duration-300 flex flex-col justify-between relative will-change-transform card-sheen"
+                className="group bg-[#140E0A] rounded-3xl overflow-hidden border border-[#261810] hover:border-[#C5A059]/60 shadow-lg hover:shadow-[0_16px_40px_rgba(0,0,0,0.7)] transition-all duration-300 flex flex-col justify-between relative will-change-transform card-sheen"
               >
                 <div>
                   {/* Image Presentation */}
-                  <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-[#050D08]">
+                  <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-[#0A0705]">
                     <SafeImage
                       src={item.imageUrl}
                       alt={item.name}
@@ -196,12 +196,12 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                       containerClassName="w-full h-full"
                     />
 
-                    {/* Price Badge in Image Corner - Cafe Dark Green Frame */}
-                    <div className="absolute top-3 right-3 bg-[#05130C]/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-[#2E8B62] shadow-lg">
+                    {/* Price Badge in Image Corner */}
+                    <div className="absolute top-3 right-3 bg-[#090604]/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-[#10B981]/40 shadow-lg">
                       <span className="font-serif text-lg font-bold text-white tabular-nums">
                         {item.price}
                       </span>
-                      <span className="text-xs font-bold text-[#34D399] ml-1">
+                      <span className="text-xs font-semibold text-[#34D399] ml-1">
                         Dh
                       </span>
                     </div>
@@ -211,7 +211,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                   <div className="p-6">
                     {/* Item Title & Arabic Title */}
                     <div className="flex items-baseline justify-between gap-3 mb-2">
-                      <h3 className="font-serif text-2xl font-bold text-white tracking-tight group-hover:text-[#34D399] transition-colors">
+                      <h3 className="font-serif text-2xl font-bold text-white tracking-tight group-hover:text-[#E0C07A] transition-colors">
                         {item.name}
                       </h3>
                       {item.nameAr && (
@@ -222,12 +222,12 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                     </div>
 
                     {/* Exact Description */}
-                    <p className="text-xs sm:text-[13px] text-[#C4D9CD] font-normal leading-relaxed mb-3">
+                    <p className="text-xs sm:text-[13px] text-[#C4B5A9] font-normal leading-relaxed mb-3">
                       {item.description}
                     </p>
 
                     {item.descriptionAr && (
-                      <p className="text-xs text-[#E0C07A]/90 font-arabic leading-relaxed mb-3 text-right">
+                      <p className="text-xs text-[#E0C07A]/80 font-arabic leading-relaxed mb-3 text-right">
                         {item.descriptionAr}
                       </p>
                     )}
@@ -235,7 +235,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                 </div>
 
                 {/* Bottom WhatsApp Order Button */}
-                <div className="p-6 pt-3 border-t border-[#132F21] bg-[#06140D]/90 space-y-2">
+                <div className="p-6 pt-3 border-t border-[#1F130B] bg-[#0E0906]/60 space-y-2">
                   <motion.a
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -248,7 +248,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                     <span>Commander via WhatsApp ({item.price} Dh)</span>
                   </motion.a>
                   <div className="text-center">
-                    <span className="text-[10px] text-[#7A998B]">
+                    <span className="text-[10px] text-[#8E796D]">
                       Destination : <strong className="text-white">+212 750-385157</strong>
                     </span>
                   </div>
@@ -264,9 +264,9 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="mt-14 p-6 rounded-3xl bg-[#081710] border border-[#163827] text-center max-w-2xl mx-auto shadow-sm"
+          className="mt-14 p-6 rounded-3xl bg-[#120C08] border border-[#22160F] text-center max-w-2xl mx-auto shadow-sm"
         >
-          <p className="text-xs text-[#A8C2B5] leading-relaxed">
+          <p className="text-xs text-[#B8A79B] leading-relaxed">
             Toutes nos formules sont servies fraîches sur place et en terrasse à Sala Al Jadida. Boissons chaudes supplémentaires, jus pressés d'orange ou de carotte disponibles à la demande.
           </p>
         </motion.div>

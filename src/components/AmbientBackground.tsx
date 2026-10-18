@@ -40,89 +40,89 @@ export const AmbientBackground: React.FC = () => {
       aria-hidden="true"
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none"
     >
-      {/* Dynamic Cursor Ambient Spotlight - Cafe Forest Green & Warm Amber */}
+      {/* Dynamic Cursor Ambient Spotlight */}
       <motion.div
-        className="fixed w-[680px] h-[680px] rounded-full -translate-x-1/2 -translate-y-1/2 opacity-30 blur-3xl will-change-transform"
+        className="fixed w-[650px] h-[650px] rounded-full -translate-x-1/2 -translate-y-1/2 opacity-25 blur-3xl will-change-transform"
         style={{
           left: springX,
           top: springY,
           background:
-            'radial-gradient(circle, rgba(38, 119, 81, 0.26) 0%, rgba(18, 56, 38, 0.16) 45%, transparent 70%)',
+            'radial-gradient(circle, rgba(197, 160, 89, 0.14) 0%, rgba(70, 39, 23, 0.08) 45%, transparent 70%)',
         }}
       />
 
-      {/* Floating Ambient Orb 1 - Deep Cafe Forest Green (Top-Right / Mid) */}
+      {/* Floating Ambient Orb 1 - Warm Gold (Top-Right / Mid) */}
       <motion.div
         style={{ y: orb1Y }}
-        className="absolute top-1/4 -right-48 w-[720px] h-[720px] rounded-full blur-[140px] bg-gradient-to-br from-[#174831]/40 via-[#0E3322]/35 to-transparent will-change-transform opacity-80"
+        className="absolute top-1/4 -right-48 w-[700px] h-[700px] rounded-full blur-[130px] bg-gradient-to-br from-[#C5A059]/12 via-[#703B1E]/18 to-transparent will-change-transform opacity-70"
       />
 
-      {/* Floating Ambient Orb 2 - Heritage Cafe British Green (Mid-Left) */}
+      {/* Floating Ambient Orb 2 - Deep Espresso (Mid-Left) */}
       <motion.div
         style={{ y: orb2Y }}
-        className="absolute top-2/3 -left-48 w-[680px] h-[680px] rounded-full blur-[140px] bg-gradient-to-tr from-[#123826]/45 via-[#1E5C3F]/30 to-transparent will-change-transform opacity-85"
+        className="absolute top-2/3 -left-48 w-[650px] h-[650px] rounded-full blur-[140px] bg-gradient-to-tr from-[#3D1E10]/25 via-[#26130A]/30 to-transparent will-change-transform opacity-80"
       />
 
-      {/* Floating Ambient Orb 3 - Warm Gold Brass Shimmer (Bottom-Right) */}
+      {/* Floating Ambient Orb 3 - Soft Caramel Glow (Bottom-Right) */}
       <motion.div
         style={{ y: orb3Y }}
-        className="absolute bottom-10 right-1/4 w-[550px] h-[550px] rounded-full blur-[120px] bg-gradient-to-tl from-[#E0C07A]/12 via-[#267751]/20 to-transparent will-change-transform opacity-70"
+        className="absolute bottom-10 right-1/4 w-[550px] h-[550px] rounded-full blur-[115px] bg-[#E0C07A]/10 will-change-transform opacity-60"
       />
 
-      {/* Floating Ambient Orb 4 - Botanical Emerald Glow (Center / Top-Left) */}
+      {/* Floating Ambient Orb 4 - Moroccan Emerald Botanical Glow (Center-Left / Mid-Page) */}
       <motion.div
         style={{ y: orb2Y }}
-        className="absolute top-[35%] -left-32 w-[650px] h-[650px] rounded-full blur-[140px] bg-gradient-to-tr from-[#0F3323]/40 via-[#2E8B62]/20 to-transparent will-change-transform opacity-75"
+        className="absolute top-[45%] -left-32 w-[600px] h-[600px] rounded-full blur-[140px] bg-gradient-to-tr from-[#0E4833]/25 via-[#10B981]/12 to-transparent will-change-transform opacity-70"
       />
 
       {/* Parallax Floating Accent 1: Stylized Coffee Bean (Top Left) */}
       <motion.div
         style={{ y: particle1Y, rotate: particleRotate1 }}
-        className="absolute top-[35%] left-[8%] w-6 h-9 opacity-25 will-change-transform"
+        className="absolute top-[35%] left-[8%] w-6 h-9 opacity-15 will-change-transform"
       >
-        <svg viewBox="0 0 24 36" fill="none" className="w-full h-full text-[#34D399]">
+        <svg viewBox="0 0 24 36" fill="none" className="w-full h-full text-[#C5A059]">
           <ellipse cx="12" cy="18" rx="10" ry="16" fill="currentColor" opacity="0.3" />
           <path
             d="M12 4C14 10 10 18 12 32"
-            stroke="#050E09"
+            stroke="#090604"
             strokeWidth="2.5"
             strokeLinecap="round"
           />
         </svg>
       </motion.div>
 
-      {/* Parallax Floating Accent 2: Cafe Emerald Ring (Mid Right) */}
+      {/* Parallax Floating Accent 2: Golden Luminous Sparkle Ring (Mid Right) */}
       <motion.div
         style={{ y: particle2Y, rotate: particleRotate2 }}
-        className="absolute top-[60%] right-[10%] w-10 h-10 rounded-full border border-[#2E8B62]/40 shadow-[0_0_15px_rgba(46,139,98,0.3)] opacity-40 will-change-transform"
+        className="absolute top-[60%] right-[10%] w-10 h-10 rounded-full border border-[#E0C07A]/20 shadow-[0_0_15px_rgba(224,192,122,0.15)] opacity-30 will-change-transform"
       />
 
       {/* Parallax Floating Accent 3: Stylized Coffee Bean (Lower Left) */}
       <motion.div
         style={{ y: particle3Y, rotate: particleRotate3 }}
-        className="absolute top-[75%] left-[12%] w-5 h-8 opacity-25 will-change-transform"
+        className="absolute top-[75%] left-[12%] w-5 h-8 opacity-20 will-change-transform"
       >
         <svg viewBox="0 0 24 36" fill="none" className="w-full h-full text-[#E0C07A]">
           <ellipse cx="12" cy="18" rx="10" ry="16" fill="currentColor" opacity="0.35" />
           <path
             d="M12 4C10 12 14 20 12 32"
-            stroke="#050E09"
+            stroke="#090604"
             strokeWidth="2.2"
             strokeLinecap="round"
           />
         </svg>
       </motion.div>
 
-      {/* Parallax Floating Accent 4: Mint Dust Sparkle (Top Center-Right) */}
+      {/* Parallax Floating Accent 4: Amber Dust Sparkle (Top Center-Right) */}
       <motion.div
         style={{ y: particle4Y }}
-        className="absolute top-[20%] right-[22%] w-2 h-2 rounded-full bg-[#34D399] shadow-[0_0_12px_#34D399] opacity-50 will-change-transform"
+        className="absolute top-[20%] right-[22%] w-2 h-2 rounded-full bg-[#E0C07A] shadow-[0_0_12px_#E0C07A] opacity-40 will-change-transform"
       />
 
       {/* Parallax Floating Accent 5: Golden Dust Sparkle (Bottom Center-Left) */}
       <motion.div
         style={{ y: particle5Y }}
-        className="absolute top-[85%] left-[28%] w-2.5 h-2.5 rounded-full bg-[#E0C07A] shadow-[0_0_14px_#E0C07A] opacity-40 will-change-transform"
+        className="absolute top-[85%] left-[28%] w-2.5 h-2.5 rounded-full bg-[#C5A059] shadow-[0_0_14px_#C5A059] opacity-35 will-change-transform"
       />
 
       {/* Subtle Texture Grid / Slats Overlay */}

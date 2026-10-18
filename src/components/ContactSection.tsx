@@ -33,7 +33,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
     business.instagramUrl || 'https://www.instagram.com/thecoffeehouse.slj/';
 
   return (
-    <section id="contact" className="py-24 bg-[#06120C] border-t border-[#153826] overflow-hidden">
+    <section id="contact" className="py-24 bg-[#090604] border-t border-[#1C120C] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -49,11 +49,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="origin-right h-[1px] w-10 sm:w-16 bg-gradient-to-r from-transparent to-[#2E8B62]"
+              className="origin-right h-[1px] w-10 sm:w-16 bg-gradient-to-r from-transparent to-[#C5A059]"
             />
             <div className="flex items-center gap-2 text-xs font-semibold tracking-widest text-[#E0C07A] uppercase">
               <span>Accès & Coordonnées</span>
-              <span aria-hidden="true" className="text-[#34D399]">·</span>
+              <span aria-hidden="true">·</span>
               <span>Sala Al Jadida</span>
             </div>
             <motion.div
@@ -61,13 +61,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="origin-left h-[1px] w-10 sm:w-16 bg-gradient-to-l from-transparent to-[#2E8B62]"
+              className="origin-left h-[1px] w-10 sm:w-16 bg-gradient-to-l from-transparent to-[#C5A059]"
             />
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
             Venez Nous Rendre Visite
           </h2>
-          <p className="text-sm sm:text-base text-[#A8C2B5] font-light leading-relaxed">
+          <p className="text-sm sm:text-base text-[#B8A79B] font-light leading-relaxed">
             Profitez de notre terrasse extérieure et de notre salon convivial à Sala Al Jadida. Ouvert tous les jours jusqu’à minuit.
           </p>
         </motion.div>
@@ -82,20 +82,20 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
             className="lg:col-span-5 space-y-5 flex flex-col justify-between"
           >
             {/* Address Card */}
-            <div className="bg-[#081710] rounded-3xl p-6 sm:p-7 border border-[#183E2C] shadow-lg space-y-4">
+            <div className="bg-[#120C08] rounded-3xl p-6 sm:p-7 border border-[#22160F] shadow-lg space-y-4">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-2xl bg-[#0E291D] text-white border border-[#23694A] flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-[#34D399]" />
+                  <div className="w-10 h-10 rounded-2xl bg-[#1C130D] text-white border border-[#2C1B12] flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5 text-[#E0C07A]" />
                   </div>
                   <div>
                     <h3 className="font-serif text-lg font-bold text-white">
                       Adresse de l'Établissement
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#D0E2D8] leading-relaxed mt-1 font-medium">
+                    <p className="text-xs sm:text-sm text-[#D4C3B7] leading-relaxed mt-1 font-medium">
                       {business.address}
                     </p>
-                    <p className="text-xs text-[#8BB09E]">
+                    <p className="text-xs text-[#8E796D]">
                       {business.city} {business.postalCode}, {business.country}
                     </p>
                   </div>
@@ -104,30 +104,30 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
                 <button
                   onClick={handleCopyAddress}
                   title="Copier l'adresse"
-                  className="p-2 text-[#8BB09E] hover:text-white bg-[#0E241A] hover:bg-[#153B2A] rounded-xl border border-[#1E4D36] transition-colors cursor-pointer shrink-0"
+                  className="p-2 text-[#8E796D] hover:text-white bg-[#1C130D] hover:bg-[#281B13] rounded-xl border border-[#2C1B12] transition-colors cursor-pointer shrink-0"
                 >
-                  {copied ? <Check className="w-4 h-4 text-[#34D399]" /> : <Copy className="w-4 h-4" />}
+                  {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
 
               {/* Hours & Plus Code */}
-              <div className="pt-3 border-t border-[#143525] flex flex-col gap-2 text-xs">
+              <div className="pt-3 border-t border-[#1F130B] flex flex-col gap-2 text-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-[#8BB09E] flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-[#34D399]" />
+                  <span className="text-[#8E796D] flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 text-[#E0C07A]" />
                     <span>Horaires :</span>
                   </span>
-                  <span className="text-[#34D399] font-medium">
+                  <span className="text-emerald-400 font-medium">
                     {business.openingHours || 'Ouvert · Ferme à 00:00 (Closes 12 AM)'}
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-[#8BB09E] flex items-center gap-1.5">
+                  <span className="text-[#8E796D] flex items-center gap-1.5">
                     <Compass className="w-3.5 h-3.5 text-[#E0C07A]" />
                     <span>Plus Code :</span>
                   </span>
-                  <span className="font-mono text-white bg-[#0E241A] px-2 py-0.5 rounded border border-[#1E4D36]">
+                  <span className="font-mono text-white bg-[#1C130D] px-2 py-0.5 rounded border border-[#2C1B12]">
                     {business.plusCode}
                   </span>
                 </div>
@@ -135,21 +135,21 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
             </div>
 
             {/* Direct Calling & WhatsApp */}
-            <div className="bg-[#081710] rounded-3xl p-6 sm:p-7 border border-[#183E2C] shadow-lg space-y-4">
+            <div className="bg-[#120C08] rounded-3xl p-6 sm:p-7 border border-[#22160F] shadow-lg space-y-4">
               <div className="flex items-start gap-3.5">
-                <div className="w-10 h-10 rounded-2xl bg-[#0E291D] text-white border border-[#23694A] flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-[#34D399]" />
+                <div className="w-10 h-10 rounded-2xl bg-[#1C130D] text-white border border-[#2C1B12] flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 text-[#E0C07A]" />
                 </div>
                 <div>
                   <h3 className="font-serif text-lg font-bold text-white">
                     Commandes & Réservations
                   </h3>
-                  <p className="text-xs text-[#8BB09E] mt-0.5">
+                  <p className="text-xs text-[#8E796D] mt-0.5">
                     Appelez-nous directement ou écrivez-nous sur WhatsApp.
                   </p>
                   <a
                     href={`tel:${business.phone.replace(/\s+/g, '')}`}
-                    className="inline-block mt-2 font-serif text-xl font-bold text-[#E0C07A] hover:text-[#34D399] tracking-wide transition-colors"
+                    className="inline-block mt-2 font-serif text-xl font-bold text-[#E0C07A] hover:text-white tracking-wide transition-colors"
                   >
                     {business.phone}
                   </a>
@@ -177,9 +177,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
                   href={business.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3 px-4 bg-gradient-to-r from-[#143D2B] to-[#123826] hover:from-[#194E37] hover:to-[#17462F] text-white rounded-2xl text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 border border-[#2E8B62] shadow-sm hover:border-[#34D399]"
+                  className="py-3 px-4 bg-[#140E0A] hover:bg-[#20150F] text-white rounded-2xl text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 border border-[#2C1B12] shadow-sm hover:border-white/30"
                 >
-                  <Navigation className="w-4 h-4 text-[#34D399]" />
+                  <Navigation className="w-4 h-4 text-[#E0C07A]" />
                   <span>Itinéraire Google Maps</span>
                 </a>
 
@@ -203,12 +203,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 bg-[#081710] rounded-3xl border border-[#183E2C] overflow-hidden shadow-2xl flex flex-col min-h-[460px]"
+            className="lg:col-span-7 bg-[#120C08] rounded-3xl border border-[#22160F] overflow-hidden shadow-2xl flex flex-col min-h-[460px]"
           >
             {/* Map Top Bar */}
-            <div className="p-4 bg-[#06140D] border-b border-[#143525] flex items-center justify-between">
+            <div className="p-4 bg-[#0E0906] border-b border-[#22160F] flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-[#34D399] animate-pulse shadow-[0_0_8px_#34D399]" />
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="text-xs font-semibold text-white">
                   the coffee house دار القهوة — Sala Al Jadida
                 </span>
@@ -217,7 +217,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
                 href={business.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-medium text-[#E0C07A] hover:text-[#34D399] flex items-center gap-1 transition-colors"
+                className="text-xs font-medium text-[#E0C07A] hover:text-white flex items-center gap-1"
               >
                 <span>Ouvrir sur Maps</span>
                 <ExternalLink className="w-3 h-3" />
@@ -239,21 +239,21 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ business }) => {
               />
 
               {/* Float Map Overlay Card matching user Google Maps screenshot */}
-              <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-sm bg-[#06120C]/95 backdrop-blur-md p-4 rounded-2xl border border-[#1A4532] shadow-2xl pointer-events-auto">
+              <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-sm bg-[#090604]/95 backdrop-blur-md p-4 rounded-2xl border border-[#2C1B12] shadow-2xl pointer-events-auto">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-xl bg-[#0E291D] text-white flex items-center justify-center shrink-0 border border-[#23694A]">
-                    <MapPin className="w-4 h-4 text-[#34D399]" />
+                  <div className="w-8 h-8 rounded-xl bg-[#1C130D] text-white flex items-center justify-center shrink-0 border border-white/10">
+                    <MapPin className="w-4 h-4 text-[#E0C07A]" />
                   </div>
                   <div>
                     <h4 className="font-serif text-sm font-bold text-white">
                       the coffee house دار القهوة
                     </h4>
-                    <p className="text-[11px] text-[#A8C2B5] mt-0.5">
+                    <p className="text-[11px] text-[#A38F82] mt-0.5">
                       4 RESIDENCE BELLE VUE 3 MAG 21, Sala Al Jadida
                     </p>
                     <div className="flex items-center gap-2 mt-1.5 text-[10px]">
-                      <span className="text-[#34D399] font-medium">Ouvert · Ferme à 00:00</span>
-                      <span className="text-[#6C8F80]">·</span>
+                      <span className="text-emerald-400 font-medium">Ouvert · Ferme à 00:00</span>
+                      <span className="text-[#8E796D]">·</span>
                       <span className="text-[#E0C07A] font-semibold">4.3★ (41 avis)</span>
                     </div>
                   </div>
