@@ -6,23 +6,29 @@
     --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
     --font-arabic: 'Amiri', 'Traditional Arabic', serif;
 
-    /* Dark Black & Espresso Night Theme */
-    --color-canvas: #090604;
-    --color-surface-dark: #120C08;
-    --color-card: #18100B;
-    --color-card-border: #2C1B12;
+    /* Primary Cafe Dark Green Theme (Heritage British Racing / European Specialty Cafe Green) */
+    --color-cafe-green-deepest: #050E09;
+    --color-cafe-green-dark: #081710;
+    --color-cafe-green-base: #0B2217;
+    --color-cafe-green-mid: #123826;
+    --color-cafe-green-rich: #174831;
+    --color-cafe-green-forest: #1E5C3F;
+    --color-cafe-green-emerald: #267751;
+    --color-cafe-green-accent: #2E8B62;
+    --color-cafe-mint: #34D399;
+
+    /* Secondary Black & Charcoal Noir Theme */
+    --color-canvas-black: #060907;
+    --color-surface-black: #080D0A;
+    --color-card-noir: #0A120E;
+    --color-card-border: #152B20;
+    --color-text-main: #F4EFEB;
+    --color-text-muted: #9BB3A7;
+
+    /* Warm Brass & Cafe Sign Gold Accents */
     --color-caramel: #C5A059;
     --color-caramel-light: #E0C07A;
-    --color-text-main: #F4EFEB;
-    --color-text-muted: #A38F82;
-
-    /* Secondary Moroccan Emerald & Mint Botanical Theme */
-    --color-secondary-green-dark: #08241A;
-    --color-secondary-green: #0E4833;
-    --color-secondary-green-mid: #166549;
-    --color-secondary-green-emerald: #059669;
-    --color-secondary-green-light: #10B981;
-    --color-secondary-green-mint: #34D399;
+    --color-gold-bright: #F5CE66;
   }
 
   html {
@@ -32,7 +38,7 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: #090604;
+    background-color: #07140E;
     color: #F4EFEB;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -49,19 +55,19 @@
 
 /* Ambient Radial Backlights */
 .ambient-gold-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(224, 192, 122, 0.12) 0%, transparent 70%);
 }
 
-.ambient-espresso-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(70, 39, 23, 0.15) 0%, transparent 70%);
+.ambient-cafe-green-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(30, 92, 63, 0.28) 0%, rgba(11, 34, 23, 0.15) 45%, transparent 70%);
 }
 
-.ambient-emerald-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+.ambient-forest-deep-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(18, 56, 38, 0.35) 0%, transparent 75%);
 }
 
-.emerald-border-glow {
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+.cafe-green-border-glow {
+  box-shadow: 0 0 20px rgba(46, 139, 98, 0.35);
 }
 
 /* Authentic Neon Storefront Sign Glow (matching user storefront photo) */
@@ -95,15 +101,15 @@
     inset 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
-/* Storefront Wood/Metal Vertical Slats Texture */
+/* Storefront Vertical Slats Texture (Deep Cafe Forest Noir) */
 .storefront-slats {
-  background-color: #090604;
+  background-color: #060E0A;
   background-image: repeating-linear-gradient(
     90deg,
-    #0E0906 0px,
-    #0E0906 18px,
-    #060403 18px,
-    #060403 20px
+    #0A1711 0px,
+    #0A1711 18px,
+    #040906 18px,
+    #040906 20px
   );
 }
 
@@ -121,7 +127,7 @@
   animation: marquee 35s linear infinite;
 }
 
-/* Card 3D Light Sheen */
+/* Card 3D Light Sheen - Cafe Emerald & Warm Gold */
 .card-sheen {
   position: relative;
   overflow: hidden;
@@ -134,7 +140,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(224, 192, 122, 0.12) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(46, 139, 98, 0.16) 0%, rgba(224, 192, 122, 0.08) 35%, transparent 65%);
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
@@ -144,19 +150,19 @@
   opacity: 1;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Cafe Dark Green with Black Track */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #090604;
+  background: #050E09;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2C1B12;
+  background: #174831;
   border-radius: 4px;
-  border: 1px solid #3D2619;
+  border: 1px solid #0D2A1C;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C5A059;
+  background: #2E8B62;
 }

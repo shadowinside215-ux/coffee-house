@@ -40,33 +40,33 @@ export const BackToTop: React.FC = () => {
           whileTap={{ scale: 0.94 }}
           onClick={() => scrollToTarget(0)}
           title="Retour en haut de page"
-          className="fixed bottom-6 right-6 z-40 p-2.5 rounded-2xl bg-[#120C08]/95 text-white border border-[#C5A059]/40 shadow-[0_8px_30px_rgba(0,0,0,0.8)] backdrop-blur-md flex items-center gap-2 group cursor-pointer hover:border-[#E0C07A] transition-colors"
+          className="fixed bottom-6 right-6 z-40 p-2.5 rounded-2xl bg-[#081710]/95 text-white border border-[#23694A] shadow-[0_8px_30px_rgba(4,16,10,0.85)] backdrop-blur-md flex items-center gap-2 group cursor-pointer hover:border-[#34D399] transition-colors"
         >
-          {/* Circular SVG Progress Ring */}
+          {/* Circular SVG Progress Ring - Cafe Emerald Green */}
           <div className="relative w-10 h-10 flex items-center justify-center">
             <svg className="w-10 h-10 -rotate-90">
               <circle
                 cx="20"
                 cy="20"
                 r={radius}
-                className="stroke-[#2C1B12] stroke-[2.5]"
+                className="stroke-[#143827] stroke-[2.5]"
                 fill="transparent"
               />
               <circle
                 cx="20"
                 cy="20"
                 r={radius}
-                className="stroke-[#E0C07A] stroke-[2.5] transition-all duration-150"
+                className="stroke-[#34D399] stroke-[2.5] transition-all duration-150"
                 fill="transparent"
                 strokeDasharray={circumference}
                 strokeDashoffset={strokeDashoffset}
                 strokeLinecap="round"
               />
             </svg>
-            <ArrowUp className="w-4 h-4 text-[#E0C07A] absolute group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUp className="w-4 h-4 text-[#34D399] absolute group-hover:-translate-y-0.5 transition-transform" />
           </div>
 
-          <span className="hidden sm:inline text-[11px] font-semibold uppercase tracking-wider text-[#D4C3B7] group-hover:text-white transition-colors pr-2">
+          <span className="hidden sm:inline text-[11px] font-semibold uppercase tracking-wider text-[#C4D9CD] group-hover:text-white transition-colors pr-2">
             Haut
           </span>
         </motion.button>

@@ -34,11 +34,11 @@ export const ScrollMarquee: React.FC<ScrollMarqueeProps> = ({ className = '' }) 
   return (
     <div
       ref={containerRef}
-      className={`relative py-6 bg-[#0B0705] border-y border-[#20140C] overflow-hidden select-none ${className}`}
+      className={`relative py-6 bg-[#071911] border-y border-[#18442F] overflow-hidden select-none ${className}`}
     >
       {/* Subtle side fade masks */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#090604] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#090604] to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#06120C] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#06120C] to-transparent z-10 pointer-events-none" />
 
       <motion.div
         style={{ skewX, x: velocityOffset }}
@@ -58,7 +58,7 @@ export const ScrollMarquee: React.FC<ScrollMarqueeProps> = ({ className = '' }) 
               return (
                 <div
                   key={`${seqIndex}-${idx}`}
-                  className="flex items-center gap-4 text-xs font-semibold tracking-[0.22em] uppercase text-[#B8A79B] hover:text-white transition-colors"
+                  className="flex items-center gap-4 text-xs font-semibold tracking-[0.22em] uppercase text-[#A8C4B6] hover:text-white transition-colors"
                 >
                   <span
                     className={
@@ -69,8 +69,8 @@ export const ScrollMarquee: React.FC<ScrollMarqueeProps> = ({ className = '' }) 
                   >
                     {item.text}
                   </span>
-                  {Icon && <Icon className="w-3.5 h-3.5 text-[#10B981] shrink-0" />}
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]/70 shadow-[0_0_4px_#10B981]" />
+                  {Icon && <Icon className="w-3.5 h-3.5 text-[#34D399] shrink-0" />}
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#34D399] shadow-[0_0_6px_#34D399]" />
                 </div>
               );
             })}

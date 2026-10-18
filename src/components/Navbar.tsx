@@ -96,15 +96,15 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#090604]/98 backdrop-blur-xl border-b border-[#2A180F] shadow-[0_8px_30px_rgba(0,0,0,0.8)]'
-          : 'bg-[#090604]/90 backdrop-blur-md border-b border-[#22160F]'
+          ? 'bg-[#06140E]/98 backdrop-blur-xl border-b border-[#173D2C] shadow-[0_8px_30px_rgba(4,14,10,0.9)]'
+          : 'bg-[#071710]/92 backdrop-blur-md border-b border-[#123123]'
       }`}
     >
       {/* Sleek Golden-Emerald Scroll Progress Bar with Glowing Head */}
       <div className="relative">
         <motion.div
           style={{ scaleX }}
-          className="origin-left h-[2.5px] bg-gradient-to-r from-[#C5A059] via-[#10B981] to-[#E0C07A] shadow-[0_0_12px_rgba(16,185,129,0.6)]"
+          className="origin-left h-[2.5px] bg-gradient-to-r from-[#22704E] via-[#34D399] to-[#E0C07A] shadow-[0_0_12px_rgba(52,211,153,0.7)]"
         />
       </div>
 
@@ -120,7 +120,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           title="the coffee house دار القهوة"
           className="flex items-center gap-2 sm:gap-3.5 whitespace-nowrap min-w-0 group py-1 select-none"
         >
-          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden bg-[#140D09] border border-[#C5A059]/40 shadow-md shrink-0 flex items-center justify-center p-1 group-hover:border-[#E0C07A] transition-all relative">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden bg-[#0A1811] border border-[#23694A]/70 shadow-md shrink-0 flex items-center justify-center p-1 group-hover:border-[#34D399] transition-all relative">
             <img
               src={logoUrl || '/logo.svg'}
               alt="Logo دار القهوة the coffee house"
@@ -145,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </a>
 
         {/* Zone 2: Navigation Links with Active Spy Highlighter */}
-        <nav className="hidden lg:flex items-center gap-7 text-xs font-medium uppercase tracking-wider text-[#B8A79B]">
+        <nav className="hidden lg:flex items-center gap-7 text-xs font-medium uppercase tracking-wider text-[#A5BFB3]">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -159,14 +159,14 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className={`py-1 relative transition-colors whitespace-nowrap shrink-0 ${
                   isActive
                     ? 'text-white font-semibold'
-                    : 'text-[#A38F82] hover:text-[#F4EFEB]'
+                    : 'text-[#9BB3A7] hover:text-[#F4EFEB]'
                 }`}
               >
                 {link.label}
                 {isActive && (
                   <motion.span
                     layoutId="activeNavIndicator"
-                    className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-[#C5A059] via-[#10B981] to-[#E0C07A] shadow-[0_0_8px_rgba(16,185,129,0.8)]"
+                    className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-[#267751] via-[#34D399] to-[#E0C07A] shadow-[0_0_8px_rgba(52,211,153,0.8)]"
                     transition={{ type: 'spring', stiffness: 350, damping: 30 }}
                   />
                 )}
@@ -183,7 +183,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             title="Suivez-nous sur Instagram"
-            className="hidden sm:flex p-2 rounded-xl bg-[#140E0A] hover:bg-[#22160F] text-[#E0C07A] hover:text-[#34D399] border border-[#2C1B12] hover:border-[#10B981]/40 transition-colors"
+            className="hidden sm:flex p-2 rounded-xl bg-[#091A12] hover:bg-[#123123] text-[#E0C07A] hover:text-[#34D399] border border-[#183D2C] hover:border-[#2E8B62] transition-colors"
           >
             <Instagram className="w-4 h-4" />
           </a>
@@ -191,7 +191,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Primary View Menu CTA - ALWAYS visible on all screen sizes */}
           <button
             onClick={() => handleScroll('#menu')}
-            className="px-2.5 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 text-[10px] sm:text-xs font-semibold tracking-wider uppercase text-white bg-gradient-to-r from-[#2C1910] via-[#1B362A] to-[#180E09] hover:from-[#3D2317] hover:to-[#22140D] rounded-xl transition-all whitespace-nowrap shrink-0 border border-white/20 shadow-md cursor-pointer hover:border-[#10B981]/60 flex items-center gap-1 sm:gap-1.5"
+            className="px-2.5 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 text-[10px] sm:text-xs font-bold tracking-wider uppercase text-white bg-gradient-to-r from-[#143D2B] via-[#1E5C3F] to-[#123826] hover:from-[#194E37] hover:to-[#17462F] rounded-xl transition-all whitespace-nowrap shrink-0 border border-[#2E8B62]/80 shadow-[0_0_15px_rgba(30,92,63,0.35)] cursor-pointer hover:border-[#34D399] hover:shadow-[0_0_22px_rgba(46,139,98,0.5)] flex items-center gap-1 sm:gap-1.5"
           >
             <Coffee className="w-3.5 h-3.5 text-[#E0C07A] shrink-0" />
             <span className="hidden xs:inline">Voir la Carte</span>
@@ -201,7 +201,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* 3-Dots Menu Toggle - ALWAYS visible on mobile & tablet (< lg) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white bg-[#140E0A] hover:bg-[#22160F] rounded-xl border border-[#C5A059]/40 shadow-sm shrink-0 flex items-center justify-center transition-all cursor-pointer hover:border-[#10B981]"
+            className="lg:hidden p-2 text-white bg-[#091A12] hover:bg-[#123123] rounded-xl border border-[#1E4D36] shadow-sm shrink-0 flex items-center justify-center transition-all cursor-pointer hover:border-[#2E8B62]"
             aria-label="Menu navigation et 3 points"
             title="Menu et navigation"
           >
@@ -210,7 +210,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             ) : (
               <div className="flex items-center justify-center gap-1 w-5 h-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#E0C07A] shadow-[0_0_6px_#E0C07A]" />
-                <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] shadow-[0_0_6px_#10B981]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#34D399] shadow-[0_0_6px_#34D399]" />
                 <span className="w-1.5 h-1.5 rounded-full bg-[#E0C07A] shadow-[0_0_6px_#E0C07A]" />
               </div>
             )}
@@ -220,7 +220,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-b border-[#2C1B12] bg-[#0E0906] px-6 py-6 space-y-4 shadow-2xl animate-in slide-in-from-top duration-200">
+        <div className="lg:hidden border-b border-[#173D2C] bg-[#071710] px-6 py-6 space-y-4 shadow-2xl animate-in slide-in-from-top duration-200">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a
@@ -230,7 +230,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   e.preventDefault();
                   handleScroll(link.href);
                 }}
-                className="text-sm font-medium uppercase tracking-wider text-[#D4C3B7] hover:text-white py-2 border-b border-[#1E130D]"
+                className="text-sm font-medium uppercase tracking-wider text-[#D1E2D9] hover:text-white py-2 border-b border-[#143124]"
               >
                 {link.label}
               </a>
@@ -241,7 +241,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-2.5 text-xs font-semibold uppercase tracking-wider text-[#E0C07A] bg-[#160F0A] border border-[#2C1B12] rounded-xl flex items-center justify-center gap-2"
+              className="w-full py-2.5 text-xs font-semibold uppercase tracking-wider text-[#E0C07A] bg-[#0A1D14] border border-[#1C4733] rounded-xl flex items-center justify-center gap-2"
             >
               <Instagram className="w-4 h-4" />
               <span>Suivre @thecoffeehouse.slj</span>
@@ -249,7 +249,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={() => handleScroll('#menu')}
-              className="w-full py-3 text-xs font-semibold uppercase tracking-wider text-white bg-[#2C1910] border border-white/20 rounded-xl text-center shadow cursor-pointer"
+              className="w-full py-3 text-xs font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-[#143D2B] via-[#1E5C3F] to-[#123826] border border-[#2E8B62]/60 rounded-xl text-center shadow cursor-pointer"
             >
               Découvrir les Formules (L’express, Frenchy, Beldi)
             </button>

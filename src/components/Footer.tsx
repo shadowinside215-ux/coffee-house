@@ -23,13 +23,13 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
     business.instagramUrl || 'https://www.instagram.com/thecoffeehouse.slj/';
 
   return (
-    <footer className="bg-[#060403] text-[#D4C3B7] border-t border-[#1C120C]">
+    <footer className="bg-[#040C08] text-[#C4D9CD] border-t border-[#133224]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12 border-b border-[#1C120C]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12 border-b border-[#133224]">
           {/* Column 1: Brand & Glowing Neon Identity */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-[#140E0A] overflow-hidden border border-[#C5A059]/40 shadow-sm shrink-0 flex items-center justify-center p-1">
+              <div className="w-12 h-12 rounded-xl bg-[#081710] overflow-hidden border border-[#23694A]/70 shadow-sm shrink-0 flex items-center justify-center p-1">
                 <img
                   src={displayLogo}
                   alt="Logo the coffee house دار القهوة"
@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
               </div>
             </div>
 
-            <p className="text-xs text-[#A38F82] leading-relaxed font-light">
+            <p className="text-xs text-[#8BB09E] leading-relaxed font-light">
               Votre escale de détente à Sala Al Jadida. Formules petit-déjeuner complètes (L’express, Frenchy, Beldi), cafés d'exception et terrasse ouverte jusqu’à minuit.
             </p>
 
@@ -61,12 +61,12 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
                 href={instagramLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-lg bg-[#140E0A] border border-[#261810] flex items-center justify-center text-[#E0C07A] hover:text-white hover:bg-[#22160F] transition-colors"
+                className="w-8 h-8 rounded-lg bg-[#081710] border border-[#163827] flex items-center justify-center text-[#34D399] hover:text-white hover:bg-[#0E291D] transition-colors"
                 title="Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
-              <span className="text-xs text-[#8E796D]">@thecoffeehouse.slj</span>
+              <span className="text-xs text-[#7A998B]">@thecoffeehouse.slj</span>
             </div>
           </div>
 
@@ -75,7 +75,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">
               Navigation
             </h4>
-            <ul className="space-y-2.5 text-xs text-[#A38F82]">
+            <ul className="space-y-2.5 text-xs text-[#8BB09E]">
               <li>
                 <a
                   href="#home"
@@ -83,7 +83,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
                     e.preventDefault();
                     handleScroll('#home');
                   }}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#34D399] transition-colors"
                 >
                   Accueil
                 </a>
@@ -95,7 +95,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
                     e.preventDefault();
                     handleScroll('#menu');
                   }}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#34D399] transition-colors"
                 >
                   Formules Petit-Déjeuner
                 </a>
@@ -107,7 +107,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
                     e.preventDefault();
                     handleScroll('#about');
                   }}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#34D399] transition-colors"
                 >
                   Notre Espace & Terrasse
                 </a>
@@ -119,7 +119,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
                     e.preventDefault();
                     handleScroll('#gallery');
                   }}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#34D399] transition-colors"
                 >
                   Galerie Photos
                 </a>
@@ -131,7 +131,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
                     e.preventDefault();
                     handleScroll('#reviews');
                   }}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#34D399] transition-colors"
                 >
                   Avis Vérifiés ({business.googleRating}★)
                 </a>
@@ -143,7 +143,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
                     e.preventDefault();
                     handleScroll('#contact');
                   }}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#34D399] transition-colors"
                 >
                   Accès & Coordonnées
                 </a>
@@ -156,15 +156,15 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">
               Coordonnées
             </h4>
-            <div className="space-y-3 text-xs text-[#A38F82]">
+            <div className="space-y-3 text-xs text-[#8BB09E]">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#E0C07A] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#34D399] shrink-0 mt-0.5" />
                 <span>
                   {business.address}, {business.city} {business.postalCode}
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#E0C07A] shrink-0" />
+                <Phone className="w-4 h-4 text-[#34D399] shrink-0" />
                 <a
                   href={`tel:${business.phone.replace(/\s+/g, '')}`}
                   className="hover:text-white transition-colors"
@@ -172,7 +172,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
                   {business.phone}
                 </a>
               </div>
-              <div className="pt-1 text-[11px] text-emerald-400 font-medium">
+              <div className="pt-1 text-[11px] text-[#34D399] font-medium">
                 {business.openingHours || 'Ouvert · Ferme à 00:00 (Closes 12 AM)'}
               </div>
             </div>
@@ -183,7 +183,7 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">
               Commandes & Livraison
             </h4>
-            <p className="text-xs text-[#A38F82] leading-relaxed font-light">
+            <p className="text-xs text-[#8BB09E] leading-relaxed font-light">
               Commandez directement sur Glovo ou par WhatsApp pour une livraison rapide à domicile ou au bureau.
             </p>
             <div className="space-y-2 pt-1">
@@ -201,22 +201,22 @@ export const Footer: React.FC<FooterProps> = ({ business, onOpenAdmin, logoUrl }
                 href={business.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2 px-4 bg-[#140E0A] hover:bg-[#20150F] text-white rounded-xl text-xs font-medium transition-colors flex items-center justify-center gap-2 border border-[#2C1B12]"
+                className="w-full py-2 px-4 bg-[#081710] hover:bg-[#0E241A] text-white rounded-xl text-xs font-medium transition-colors flex items-center justify-center gap-2 border border-[#183E2C] hover:border-[#2E8B62]"
               >
                 <span>Google Maps (4.3★)</span>
-                <ExternalLink className="w-3.5 h-3.5 text-[#E0C07A]" />
+                <ExternalLink className="w-3.5 h-3.5 text-[#34D399]" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8E796D]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6F9181]">
           <div>
             &copy; {currentYear} <strong className="font-medium text-white">the coffee house دار القهوة</strong>. Tous droits réservés.
           </div>
           <div className="flex items-center gap-4">
-            <span>Café & Salon de Thé</span>
+            <span className="text-[#34D399]">Café & Salon de Thé</span>
             <span aria-hidden="true">·</span>
             <span>Sala Al Jadida 11100, Maroc</span>
           </div>

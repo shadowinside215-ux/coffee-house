@@ -120,7 +120,7 @@ export default function App() {
   const activeLogoUrl = settings.logoUrl || business.logoUrl || '/logo.svg';
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#090604] text-[#F4EFEB] relative overflow-x-hidden selection:bg-[#C5A059]/30 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#06120C] text-[#F4EFEB] relative overflow-x-hidden selection:bg-[#1E5C3F] selection:text-white">
       {/* Living Ambient Lighting & Parallax Depth */}
       <AmbientBackground />
 

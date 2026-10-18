@@ -50,7 +50,7 @@ export const ScrollNavigator: React.FC = () => {
           exit={{ opacity: 0, x: 20 }}
           transition={{ duration: 0.4 }}
           aria-label="Navigation rapide"
-          className="fixed right-2 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex flex-col items-end gap-2 sm:gap-3.5 select-none p-1 sm:p-0 rounded-full bg-[#120C08]/70 sm:bg-transparent border border-[#2C1B12]/60 sm:border-transparent backdrop-blur-sm sm:backdrop-blur-none"
+          className="fixed right-2 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex flex-col items-end gap-2 sm:gap-3.5 select-none p-1 sm:p-0 rounded-full bg-[#081710]/80 sm:bg-transparent border border-[#183E2C]/60 sm:border-transparent backdrop-blur-sm sm:backdrop-blur-none"
         >
           {SECTIONS.map((section) => {
             const isActive = activeId === section.id;
@@ -72,24 +72,24 @@ export const ScrollNavigator: React.FC = () => {
                       animate={{ opacity: 1, x: 0, scale: 1 }}
                       exit={{ opacity: 0, x: 8, scale: 0.92 }}
                       transition={{ duration: 0.15 }}
-                      className="hidden sm:block absolute right-7 px-3 py-1.5 rounded-xl bg-[#120C08]/95 backdrop-blur-md border border-[#C5A059]/40 shadow-xl text-right whitespace-nowrap pointer-events-none"
+                      className="hidden sm:block absolute right-7 px-3 py-1.5 rounded-xl bg-[#081710]/95 backdrop-blur-md border border-[#23694A]/70 shadow-xl text-right whitespace-nowrap pointer-events-none"
                     >
                       <span className="block text-[11px] font-semibold text-white tracking-wide">
                         {section.label}
                       </span>
-                      <span className="block font-arabic text-[10px] text-[#E0C07A] font-bold">
+                      <span className="block font-arabic text-[10px] text-[#34D399] font-bold">
                         {section.labelAr}
                       </span>
                     </motion.div>
                   )}
                 </AnimatePresence>
 
-                {/* Micro indicator pill / dot */}
+                {/* Micro indicator pill / dot - Cafe Dark Green to Emerald Glow */}
                 <div
                   className={`transition-all duration-300 rounded-full flex items-center justify-center ${
                     isActive
-                      ? 'w-3 h-8 bg-gradient-to-b from-[#C5A059] to-[#E0C07A] shadow-[0_0_12px_rgba(224,192,122,0.8)]'
-                      : 'w-2 h-2 bg-[#4A3222] group-hover:bg-[#C5A059] group-hover:h-4 group-hover:w-2'
+                      ? 'w-3 h-8 bg-gradient-to-b from-[#1E5C3F] via-[#2E8B62] to-[#34D399] shadow-[0_0_12px_rgba(46,139,98,0.85)]'
+                      : 'w-2 h-2 bg-[#133827] group-hover:bg-[#2E8B62] group-hover:h-4 group-hover:w-2'
                   }`}
                 />
               </div>

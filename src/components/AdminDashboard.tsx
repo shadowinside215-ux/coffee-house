@@ -395,9 +395,9 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
-      <div className="relative w-full max-w-5xl bg-[#0B0705] text-[#F4EFEB] rounded-3xl border border-[#2B1B12] shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      <div className="relative w-full max-w-5xl bg-[#06140E] text-[#F4EFEB] rounded-3xl border border-[#183E2C] shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
         {/* Top Header */}
-        <div className="px-6 py-5 bg-[#120C08] text-white flex items-center justify-between border-b border-[#22160F] shrink-0">
+        <div className="px-6 py-5 bg-[#081B13] text-white flex items-center justify-between border-b border-[#143525] shrink-0">
           <div className="flex items-center gap-3">
             {settingsForm.logoUrl || business.logoUrl ? (
               <div className="w-9 h-9 rounded-xl bg-[#1C130D] border border-[#C5A059]/50 flex items-center justify-center p-1 overflow-hidden shrink-0 neon-cup-glow">
